@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(156, 153, 153);
+  color: #fff;
+  font-size: 24px;
+  padding-top: 100px;
+}
+
+.row {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px auto;
+}
+
+
+.placeholder {
+  min-width: 200px;
+  min-height: 150px;
+  background: rgb(14, 17, 201);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  &.hovered {
+    background: rgb(0, 211, 193);
+  }
+}
+
+.item {
+  cursor: grab;
+  padding: 5px 10px;
+  background: rgb(197, 36, 8);
+  border-radius: 5px;
+
+  &.hold {
+    color: rgb(255, 255, 255);
+    background: rgb(192, 3, 167);
+  }
+
+  &.hide {
+    display: none;
+  }
+}
