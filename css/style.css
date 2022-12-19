@@ -10,7 +10,7 @@ body {
   padding-top: 100px;
 }
 
-.row {
+.placeholders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,8 +1,8 @@
-const dragItem = document.querySelector(".item");
+const dragableItem = document.querySelector(".item");
 const placeholder = document.querySelectorAll(".placeholder");
 
-dragItem.addEventListener("dragstart", dragStart);
-dragItem.addEventListener("dragend", dragEnd);
+dragableItem.addEventListener("dragstart", dragStart);
+dragableItem.addEventListener("dragend", dragEnd);
 
 function dragStart(ev) {
 	ev.target.classList.add("hold");
@@ -15,11 +15,11 @@ function dragEnd(ev) {
 	ev.target.className = "item";
 }
 
-placeholder.forEach((el) => {
-	el.addEventListener("dragenter", dragEnter);
-	el.addEventListener("dragover", dragOver);
-	el.addEventListener("dragleave", dragLeave);
-	el.addEventListener("drop", drop);
+placeholder.forEach((elem) => {
+	elem.addEventListener("dragenter", dragEnter);
+	elem.addEventListener("dragover", dragOver);
+	elem.addEventListener("dragleave", dragLeave);
+	elem.addEventListener("drop", dropItem);
 });
 
 function dragEnter(ev) {
@@ -34,8 +34,8 @@ function dragLeave(ev) {
 	ev.target.style.backgroundColor = `rgb(14, 17, 201)`;
 }
 
-function drop(ev) {
-	ev.target.append(dragItem);
+function dropItem(ev) {
+	ev.target.append(dragableItem);
 	ev.target.style.backgroundColor = `rgb(14, 17, 201)`;
 }
 
